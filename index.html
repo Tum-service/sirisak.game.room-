@@ -11,8 +11,6 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:'Kanit','Itim','Segoe UI',sans-serif;font-weight:500;background:#0a0612;min-height:100vh;padding:16px;color:#f5e6d3;position:relative;overflow-x:hidden}
-
-/* ===== HALLOWEEN BACKGROUND ===== */
 .bg-animated{position:fixed;inset:0;z-index:-3;background:
   radial-gradient(circle at 82% 12%, rgba(255,200,120,.18) 0%, transparent 22%),
   radial-gradient(circle at 50% 55%, rgba(107,33,168,.30), transparent 65%),
@@ -20,25 +18,21 @@ body{font-family:'Kanit','Itim','Segoe UI',sans-serif;font-weight:500;background
   linear-gradient(180deg,#0a0612 0%,#1a0b2e 45%,#2d1b4e 100%);
   background-size:200% 200%;animation:gradientFlow 22s ease infinite}
 @keyframes gradientFlow{0%,100%{background-position:0 50%}50%{background-position:100% 50%}}
-
 .moon{position:fixed;top:6%;right:10%;width:110px;height:110px;border-radius:50%;z-index:-2;
   background:radial-gradient(circle at 35% 32%,#fffbe6 0%,#f5e6a0 55%,#d4b95e 100%);
-  box-shadow:0 0 70px 25px rgba(255,230,150,.40),0 0 140px 60px rgba(255,200,100,.22),
-             0 0 200px 100px rgba(168,85,247,.15);
+  box-shadow:0 0 70px 25px rgba(255,230,150,.40),0 0 140px 60px rgba(255,200,100,.22),0 0 200px 100px rgba(168,85,247,.15);
   animation:moonGlow 6s ease-in-out infinite}
 @keyframes moonGlow{0%,100%{box-shadow:0 0 70px 25px rgba(255,230,150,.40),0 0 140px 60px rgba(255,200,100,.22),0 0 200px 100px rgba(168,85,247,.15)}
   50%{box-shadow:0 0 90px 35px rgba(255,230,150,.55),0 0 170px 80px rgba(255,200,100,.30),0 0 240px 120px rgba(168,85,247,.22)}}
 .moon::before,.moon::after{content:"";position:absolute;border-radius:50%;background:rgba(180,150,80,.30)}
 .moon::before{width:26px;height:26px;top:24%;left:22%}
 .moon::after{width:16px;height:16px;bottom:28%;right:24%}
-
 .fog{position:fixed;left:0;right:0;bottom:0;height:45%;z-index:-2;pointer-events:none;
   background:linear-gradient(180deg,transparent 0%,rgba(150,100,200,.12) 40%,rgba(100,60,150,.28) 100%);
   filter:blur(24px);animation:fogMove 26s ease-in-out infinite alternate}
 @keyframes fogMove{0%{transform:translateX(-6%);opacity:.65}100%{transform:translateX(6%);opacity:1}}
 .fog.fog2{bottom:5%;height:35%;animation-duration:38s;animation-direction:alternate-reverse;opacity:.7;
   background:linear-gradient(180deg,transparent 0%,rgba(249,115,22,.10) 50%,rgba(107,33,168,.22) 100%)}
-
 .bg-blobs{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
 .bg-blobs .blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:.45;will-change:transform}
 .bg-blobs .blob:nth-child(1){width:340px;height:340px;background:#a855f7;top:-90px;left:-70px;animation:blobFloat1 15s ease-in-out infinite}
@@ -49,7 +43,6 @@ body{font-family:'Kanit','Itim','Segoe UI',sans-serif;font-weight:500;background
 @keyframes blobFloat1{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(60px,80px) scale(1.15)}}
 @keyframes blobFloat2{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-70px,50px) scale(1.1)}}
 @keyframes blobFloat3{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(50px,-60px) scale(1.2)}}
-
 .bats{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
 .bats .bat{position:absolute;width:44px;height:24px;color:#1a0b2e;
   filter:drop-shadow(0 0 8px rgba(168,85,247,.65)) drop-shadow(0 2px 4px rgba(0,0,0,.9));
@@ -63,14 +56,12 @@ body{font-family:'Kanit','Itim','Segoe UI',sans-serif;font-weight:500;background
   50%{transform:translate(-64vw,5vh) rotate(-3deg) scale(.95);opacity:.85}
   75%{transform:translate(-30vw,-3vh) rotate(5deg) scale(1.02);opacity:1}
   100%{transform:translate(0,0) rotate(-4deg) scale(1);opacity:.9}}
-
 .spider-web{position:fixed;top:0;left:0;width:180px;height:180px;z-index:0;pointer-events:none;opacity:.55;
   background:
     radial-gradient(circle at 0% 0%, transparent 55%, rgba(200,200,220,.14) 56%, transparent 58%),
     radial-gradient(circle at 0% 0%, transparent 35%, rgba(200,200,220,.14) 36%, transparent 38%),
     radial-gradient(circle at 0% 0%, transparent 18%, rgba(200,200,220,.14) 19%, transparent 21%);
-  background-size:180px 180px;
-  animation:webPulse 5s ease-in-out infinite}
+  background-size:180px 180px;animation:webPulse 5s ease-in-out infinite}
 .spider-web::before,.spider-web::after{content:"";position:absolute;top:0;left:0;height:180px;width:2px;
   background:linear-gradient(180deg,rgba(200,200,220,.20),transparent);transform-origin:top left}
 .spider-web::before{transform:rotate(30deg)}
@@ -79,14 +70,11 @@ body{font-family:'Kanit','Itim','Segoe UI',sans-serif;font-weight:500;background
 .spider{position:fixed;top:14px;left:14px;width:26px;height:26px;z-index:1;pointer-events:none;
   animation:spiderBob 3.2s ease-in-out infinite;filter:drop-shadow(0 2px 4px rgba(0,0,0,.8))}
 @keyframes spiderBob{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(8px) rotate(3deg)}}
-
 .bg-floaters{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
 .bg-floaters span{position:absolute;bottom:-60px;font-size:22px;opacity:0;
   animation-name:floatUp;animation-timing-function:ease-in;animation-iteration-count:infinite;
   filter:drop-shadow(0 0 6px rgba(168,85,247,.5))}
 @keyframes floatUp{0%{transform:translateY(0) rotate(0);opacity:0}10%{opacity:.85}90%{opacity:.55}100%{transform:translateY(-115vh) rotate(360deg);opacity:0}}
-
-/* ===== FULLSCREEN TOGGLE ===== */
 .fs-toggle{position:fixed;top:14px;left:14px;z-index:9999;
   width:42px;height:42px;border-radius:50%;
   background:rgba(20,10,40,.75);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
@@ -103,23 +91,7 @@ body{font-family:'Kanit','Itim','Segoe UI',sans-serif;font-weight:500;background
 .fs-toggle.is-fullscreen .fs-icon-contract{display:block}
 .fs-toggle.is-fullscreen{border-color:rgba(168,85,247,.65);color:#c4b5fd}
 .fs-toggle.is-fullscreen:hover{background:rgba(168,85,247,.3);color:#e9d5ff}
-
-/* ===== PIXABAY SETTINGS BUTTON ===== */
-.pixabay-settings{position:fixed;top:14px;right:14px;z-index:9999;
-  width:42px;height:42px;border-radius:50%;
-  background:rgba(20,10,40,.75);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
-  border:1.5px solid rgba(34,197,94,.55);color:#4ade80;cursor:pointer;
-  display:flex;align-items:center;justify-content:center;transition:.2s;
-  box-shadow:0 4px 14px rgba(0,0,0,.5);font-size:20px;position:fixed}
-.pixabay-settings:hover{background:rgba(34,197,94,.28);color:#f0fdf4;transform:scale(1.08)}
-.pixabay-settings.active::after{content:"";position:absolute;top:-2px;right:-2px;
-  width:12px;height:12px;border-radius:50%;background:#22c55e;
-  box-shadow:0 0 8px #22c55e;animation:pulse 1.6s infinite}
-@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.25)}}
-
 .app{max-width:1200px;margin:0 auto;position:relative;z-index:1;padding-left:0}
-
-/* ===== HEADER ===== */
 .header{text-align:center;padding:30px 24px 34px;position:relative;margin-bottom:28px;
   background:
     radial-gradient(ellipse at 30% 15%, rgba(255,200,120,.35), transparent 45%),
@@ -151,8 +123,6 @@ body{font-family:'Kanit','Itim','Segoe UI',sans-serif;font-weight:500;background
 .header .badge{display:inline-block;background:rgba(10,6,18,.55);backdrop-filter:blur(8px);
   padding:9px 22px;border-radius:50px;font-size:15px;margin-top:14px;font-weight:700;color:#ffedd5;
   border:1.5px solid rgba(255,200,120,.45);box-shadow:0 0 20px rgba(249,115,22,.35)}
-
-/* ===== CONTROLS ===== */
 .controls{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:24px;align-items:center;
   background:rgba(20,10,40,.70);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
   padding:16px 20px;border-radius:30px;
@@ -172,8 +142,6 @@ body{font-family:'Kanit','Itim','Segoe UI',sans-serif;font-weight:500;background
 .controls .stats{font-size:16px;color:#c4b5fd;margin-left:auto;white-space:nowrap;
   background:rgba(107,33,168,.40);padding:6px 16px;border-radius:30px;border:1px solid rgba(168,85,247,.35)}
 .controls .stats strong{color:#fb923c;font-size:20px;text-shadow:0 0 10px rgba(251,146,60,.7)}
-
-/* ===== GRADE TABS ===== */
 .grade-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px;justify-content:center}
 .grade-tabs button{padding:9px 20px;border:2px solid rgba(168,85,247,.40);border-radius:40px;
   background:rgba(20,10,40,.65);font-size:15px;font-weight:700;color:#c4b5fd;cursor:pointer;
@@ -182,7 +150,6 @@ body{font-family:'Kanit','Itim','Segoe UI',sans-serif;font-weight:500;background
 .grade-tabs button.active{background:radial-gradient(ellipse at 30% 25%,#fb923c,#f97316 45%,#ea580c 100%);
   color:#0a0612;border-color:#fb923c;font-weight:800;
   box-shadow:0 6px 20px rgba(249,115,22,.6),inset 0 -3px 0 rgba(0,0,0,.25),inset 0 3px 6px rgba(255,255,255,.25)}
-
 .grade-tabs a.game-btn{padding:9px 20px;border:2px solid rgba(34,197,94,.55);border-radius:40px;
   background:linear-gradient(135deg,rgba(34,197,94,.28),rgba(21,128,61,.4));
   font-size:15px;font-weight:800;color:#bbf7d0;cursor:pointer;
@@ -195,8 +162,6 @@ body{font-family:'Kanit','Itim','Segoe UI',sans-serif;font-weight:500;background
 .grade-tabs a.game-btn:active{transform:scale(.96)}
 .grade-tabs a.game-btn .game-pulse{display:inline-block;animation:gamePulse 1.6s ease-in-out infinite}
 @keyframes gamePulse{0%,100%{transform:scale(1)}50%{transform:scale(1.18)}}
-
-/* ===== VOCAB GRID ===== */
 .vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:18px}
 .card{background:linear-gradient(180deg,rgba(30,15,55,.9),rgba(15,7,30,.95));
   border-radius:28px;padding:16px 16px 14px;
@@ -226,8 +191,6 @@ body{font-family:'Kanit','Itim','Segoe UI',sans-serif;font-weight:500;background
   border-radius:18px;background:radial-gradient(circle at 50% 40%,#2a1240,#0f0518);
   font-size:74px;font-weight:900;line-height:1;color:#fb923c;user-select:none;
   text-shadow:0 0 20px rgba(249,115,22,.8),0 4px 0 rgba(0,0,0,.4)}
-
-/* Pixabay image */
 .card .pixabay-img{position:relative;z-index:1;width:100%;height:100%;
   object-fit:cover;border-radius:18px;display:none;
   background:radial-gradient(circle at 50% 40%,#2a1240,#0f0518)}
@@ -239,7 +202,6 @@ body{font-family:'Kanit','Itim','Segoe UI',sans-serif;font-weight:500;background
   background:linear-gradient(90deg,rgba(168,85,247,.1),rgba(249,115,22,.2),rgba(168,85,247,.1));
   background-size:200% 100%;animation:shimmer 1.2s linear infinite;z-index:0}
 @keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
-
 .card .en{font-size:27px;font-weight:800;color:#ffedd5;line-height:1.3;
   text-shadow:0 0 12px rgba(255,200,120,.4),0 2px 4px rgba(0,0,0,.6)}
 .card .th{font-size:17px;font-weight:600;color:#c4b5fd;margin-top:2px}
@@ -255,6 +217,7 @@ body{font-family:'Kanit','Itim','Segoe UI',sans-serif;font-weight:500;background
 .card.speaking{border-color:#f97316;background:linear-gradient(180deg,rgba(50,25,80,.95),rgba(30,15,55,.98));
   box-shadow:0 0 30px rgba(249,115,22,.6),0 10px 26px rgba(0,0,0,.55)}
 .card.speaking .speak-icon{opacity:1;animation:pulse .8s infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.25)}}
 .card .mic-icon{position:absolute;top:12px;left:14px;font-size:17px;z-index:2;
   background:rgba(20,10,40,.9);border-radius:50%;width:30px;height:30px;
   display:flex;align-items:center;justify-content:center;opacity:.65;
@@ -267,7 +230,6 @@ body{font-family:'Kanit','Itim','Segoe UI',sans-serif;font-weight:500;background
 .card.mic-fail{animation:cardShake .45s ease}
 @keyframes cardGoodFlash{0%{box-shadow:0 0 0 0 rgba(34,197,94,.6)}60%{box-shadow:0 0 0 14px rgba(34,197,94,0)}100%{box-shadow:0 0 0 0 rgba(34,197,94,0)}}
 @keyframes cardShake{0%,100%{transform:translateX(0)}20%{transform:translateX(-6px)}40%{transform:translateX(6px)}60%{transform:translateX(-4px)}80%{transform:translateX(4px)}}
-
 .sticker-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;z-index:30}
 .sticker-pop{text-align:center;animation:stickerPop 1.7s ease forwards;filter:drop-shadow(0 6px 12px rgba(249,115,22,.6))}
 .sticker-pop .sticker-emoji{font-size:58px;display:block}
@@ -277,8 +239,6 @@ body{font-family:'Kanit','Itim','Segoe UI',sans-serif;font-weight:500;background
 .sticker-pop.big .sticker-emoji{font-size:92px}
 .sticker-pop.big .sticker-text{font-size:20px;padding:5px 20px}
 @keyframes stickerPop{0%{transform:scale(0) rotate(-20deg);opacity:0}15%{transform:scale(1.35) rotate(10deg);opacity:1}30%{transform:scale(.92) rotate(-6deg)}45%{transform:scale(1.08) rotate(3deg)}60%{transform:scale(1) rotate(0)}82%{opacity:1}100%{opacity:0;transform:scale(1) translateY(-14px)}}
-
-/* ===== MODAL ===== */
 .modal-overlay{display:none;position:fixed;inset:0;background:rgba(5,2,15,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);z-index:1000;align-items:center;justify-content:center;padding:20px}
 .modal-overlay.open{display:flex}
 .modal{background:linear-gradient(180deg,#1e0f38,#0f0518);border-radius:40px;max-width:720px;width:100%;
@@ -345,13 +305,11 @@ body{font-family:'Kanit','Itim','Segoe UI',sans-serif;font-weight:500;background
 .modal-mic-feedback.good{color:#4ade80}
 .modal-mic-feedback.bad{color:#fb923c}
 .modal-mic-feedback.err{color:#f87171}
-
 .empty-state{text-align:center;padding:60px 20px;color:#a78bfa}
 .empty-state .big-icon{font-size:64px;margin-bottom:12px;filter:drop-shadow(0 0 12px rgba(249,115,22,.5))}
 .empty-state h3{font-size:24px;color:#c4b5fd}
 .footer{text-align:center;padding:30px 0 10px;font-size:15px;color:#7c6fa8;
   text-shadow:0 0 8px rgba(168,85,247,.3)}
-
 @media (max-width:640px){
 body{padding:10px}
 .moon{width:80px;height:80px;top:4%;right:6%}
@@ -374,7 +332,6 @@ body{padding:10px}
 .modal .modal-speak-btn,.modal .modal-mic-btn{width:100%;justify-content:center}
 .fs-toggle{width:38px;height:38px;top:10px;left:10px}
 .fs-toggle svg{width:18px;height:18px}
-.pixabay-settings{width:38px;height:38px;top:10px;right:10px;font-size:18px}
 .spider-web{width:130px;height:130px;background-size:130px 130px}
 }
 @media (prefers-reduced-motion:reduce){
@@ -408,8 +365,6 @@ body{padding:10px}
     <path d="M16 21v-3a2 2 0 0 1 2-2h3"/><path d="M3 16h3a2 2 0 0 1 2 2v3"/>
   </svg>
 </button>
-
-<button class="pixabay-settings" id="pixabaySettings" title="ตั้งค่า Pixabay API Key">🖼️</button>
 
 <div class="app" id="app">
 <header class="header">
@@ -468,28 +423,13 @@ body{padding:10px}
 </div>
 </div>
 
-<div class="modal-overlay" id="pixabayModal">
-  <div class="modal" style="max-width:520px">
-    <button class="close-btn" id="pixabayClose">✕</button>
-    <h2 style="font-size:24px;margin-bottom:8px">🖼️ ตั้งค่า Pixabay</h2>
-    <p style="color:#c4b5fd;font-size:14px;line-height:1.6;margin-bottom:14px">
-      ขอ API Key ฟรีได้ที่ <a href="https://pixabay.com/api/docs/" target="_blank" 
-      style="color:#fb923c">pixabay.com/api/docs/</a> (สมัครฟรี 5,000 requests/ชั่วโมง)
-      แล้วนำมาวางด้านล่าง ระบบจะ cache รูปไว้ในเครื่องเพื่อลดการเรียก API
-    </p>
-    <input type="text" id="pixabayKeyInput" placeholder="ใส่ Pixabay API Key ของคุณ..."
-      style="width:100%;padding:12px 16px;border-radius:14px;border:2px solid rgba(168,85,247,.4);
-      background:rgba(10,6,18,.85);color:#f5e6d3;font-family:inherit;font-size:15px;outline:none">
-    <div class="modal-btn-row" style="margin-top:16px">
-      <button class="modal-speak-btn" id="pixabaySave">💾 บันทึก</button>
-      <button class="modal-mic-btn" id="pixabayClear">🗑️ ล้าง Cache รูป</button>
-    </div>
-    <div id="pixabayStatus" style="margin-top:12px;font-size:14px;color:#a78bfa"></div>
-  </div>
-</div>
-
 <script>
-   // ============================================================
+// ============================================================
+//  🔑 PIXABAY API KEY — ฝังไว้ในโค้ดแล้ว
+// ============================================================
+const PIXABAY_KEY = '57649556-308a8ae941a8a3cd2a7fbe745';
+
+// ============================================================
 //  VOCAB_DATA
 // ============================================================
 const VOCAB_DATA = `
@@ -4514,7 +4454,7 @@ const EMOJI_MAP = {
 };
 
 // ============================================================
-//  SVG_MAP (fallback สำหรับคำที่อีโมจิไม่ตรง)
+//  SVG_MAP (fallback)
 // ============================================================
 const SVG_MAP = {
 'longan':'<svg viewBox="0 0 100 100"><circle cx="50" cy="58" r="28" fill="#8B6F47"/><circle cx="42" cy="50" r="4" fill="#5C4A2F"/><circle cx="58" cy="54" r="4" fill="#5C4A2F"/><circle cx="50" cy="66" r="4" fill="#5C4A2F"/><path d="M50 30 Q52 18 56 12" stroke="#4A7C2F" stroke-width="3" fill="none" stroke-linecap="round"/></svg>',
@@ -4534,8 +4474,6 @@ const SVG_MAP = {
 'space ship':'<svg viewBox="0 0 100 100"><path d="M50 14 Q66 44 66 70 L34 70 Q34 44 50 14 Z" fill="#ECF0F1" stroke="#95A5A6" stroke-width="2"/><path d="M34 70 L22 86 L50 80 L78 86 L66 70 Z" fill="#E74C3C"/><circle cx="50" cy="42" r="7" fill="#3498DB" stroke="#95A5A6" stroke-width="1.5"/><path d="M50 82 Q50 90 50 96" stroke="#F1C40F" stroke-width="3" stroke-linecap="round"/></svg>',
 'table tennis':'<svg viewBox="0 0 100 100"><ellipse cx="34" cy="42" rx="22" ry="28" fill="#E74C3C" transform="rotate(-20 34 42)"/><ellipse cx="34" cy="42" rx="22" ry="28" fill="none" stroke="#C0392B" stroke-width="1.5" transform="rotate(-20 34 42)"/><path d="M36 72 L42 88" stroke="#8B6F47" stroke-width="6" stroke-linecap="round"/><circle cx="72" cy="36" r="11" fill="#FFF" stroke="#95A5A6" stroke-width="1.5"/></svg>',
 'P.E.':'<svg viewBox="0 0 100 100"><circle cx="38" cy="58" r="24" fill="#E74C3C"/><circle cx="38" cy="58" r="10" fill="#FFF"/><rect x="56" y="50" width="28" height="16" rx="3" fill="#C0392B"/><path d="M28 32 Q38 24 48 32" stroke="#333" stroke-width="2.5" fill="none" stroke-linecap="round"/><circle cx="52" cy="24" r="3" fill="#333"/></svg>',
-'textbook':'<svg viewBox="0 0 100 100"><path d="M12 24 Q30 20 50 24 Q70 20 88 24 L88 82 Q70 78 50 82 Q30 78 12 82 Z" fill="#3498DB"/><path d="M12 24 L50 24 L50 82 L12 82 Z" fill="#2980B9"/><path d="M20 36 L44 36 M20 46 L44 46 M20 56 L40 56" stroke="#ECF0F1" stroke-width="2" stroke-linecap="round"/><path d="M56 36 L80 36 M56 46 L80 46 M56 56 L76 56" stroke="#ECF0F1" stroke-width="2" stroke-linecap="round"/></svg>',
-'schoolbag':'<svg viewBox="0 0 100 100"><path d="M24 40 Q24 28 36 28 L64 28 Q76 28 76 40 L80 86 L20 86 Z" fill="#E67E22"/><path d="M24 52 L76 52" stroke="#B85C10" stroke-width="2.5"/><rect x="34" y="58" width="32" height="22" rx="3" fill="#B85C10"/><path d="M40 28 Q40 20 50 20 Q60 20 60 28" stroke="#8B6F47" stroke-width="2.5" fill="none"/></svg>',
 'comb':'<svg viewBox="0 0 100 100"><rect x="18" y="30" width="64" height="40" rx="4" fill="#E74C3C"/><path d="M22 68 L26 82 M32 68 L36 82 M42 68 L46 82 M52 68 L56 82 M62 68 L66 82 M72 68 L76 82" stroke="#C0392B" stroke-width="3.5" stroke-linecap="round"/></svg>',
 'hairdryer':'<svg viewBox="0 0 100 100"><path d="M22 42 Q22 30 34 30 L58 30 Q70 30 70 42 L70 58 Q70 70 58 70 L34 70 Q22 70 22 58 Z" fill="#E74C3C"/><rect x="14" y="46" width="12" height="12" fill="#C0392B"/><circle cx="46" cy="50" r="8" fill="#C0392B"/><path d="M76 42 L86 36 M76 50 L88 50 M76 58 L86 64" stroke="#3498DB" stroke-width="2.5" stroke-linecap="round"/></svg>',
 'sink':'<svg viewBox="0 0 100 100"><path d="M15 50 L85 50 L82 78 Q82 84 76 84 L24 84 Q18 84 18 78 Z" fill="#ECF0F1" stroke="#95A5A6" stroke-width="2"/><path d="M30 50 L30 40 Q30 30 40 30 L60 30 Q70 30 70 40 L70 50" fill="none" stroke="#95A5A6" stroke-width="3"/><circle cx="50" cy="45" r="2" fill="#95A5A6"/></svg>',
@@ -4550,9 +4488,9 @@ const SVG_MAP = {
 'score':'<svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="34" fill="#F1C40F" stroke="#E67E22" stroke-width="3"/><text x="50" y="68" text-anchor="middle" font-size="46" font-weight="900" fill="#E67E22" font-family="Arial">10</text></svg>',
 'match':'<svg viewBox="0 0 100 100"><path d="M20 50 Q20 34 36 34 Q50 34 50 50 Q50 66 36 66 Q20 66 20 50 Z" fill="#27AE60"/><path d="M50 50 Q50 34 64 34 Q80 34 80 50 Q80 66 64 66 Q50 66 50 50 Z" fill="#27AE60"/><path d="M42 44 L42 56 M38 50 L46 50" stroke="#FFF" stroke-width="2.5" stroke-linecap="round"/></svg>',
 'single':'<svg viewBox="0 0 100 100"><circle cx="50" cy="34" r="16" fill="#F5C6A0"/><circle cx="44" cy="32" r="2" fill="#333"/><circle cx="56" cy="32" r="2" fill="#333"/><path d="M44 40 Q50 44 56 40" stroke="#333" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M24 88 Q24 58 50 58 Q76 58 76 88 Z" fill="#9B59B6"/></svg>',
-'poor':'<svg viewBox="0 0 100 100"><path d="M30 30 Q30 22 38 22 L62 22 Q70 22 70 30 L72 80 L28 80 Z" fill="#95A5A6"/><path d="M30 40 L70 40 M30 50 L70 50" stroke="#7F8C8D" stroke-width="2" stroke-dasharray="4 4"/><path d="M60 60 L70 70 L65 72 L68 80" stroke="#7F8C8D" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="42" cy="60" r="4" fill="#7F8C8D"/><circle cx="50" cy="66" r="3" fill="#7F8C8D"/></svg>',
+'poor':'<svg viewBox="0 0 100 100"><path d="M30 30 Q30 22 38 22 L62 22 Q70 22 70 30 L72 80 L28 80 Z" fill="#95A5A6"/><path d="M30 40 L70 40 M30 50 L70 50" stroke="#7F8C8D" stroke-width="2" stroke-dasharray="4 4"/><circle cx="42" cy="60" r="4" fill="#7F8C8D"/><circle cx="50" cy="66" r="3" fill="#7F8C8D"/></svg>',
 'hungry':'<svg viewBox="0 0 100 100"><circle cx="50" cy="46" r="26" fill="#F5C6A0"/><circle cx="42" cy="42" r="3" fill="#333"/><circle cx="58" cy="42" r="3" fill="#333"/><ellipse cx="50" cy="60" rx="10" ry="8" fill="#4A3728"/><path d="M40 60 Q50 54 60 60" stroke="#333" stroke-width="1.5" fill="none"/></svg>',
-'handsome':'<svg viewBox="0 0 100 100"><circle cx="50" cy="34" r="18" fill="#F5C6A0"/><path d="M30 30 Q50 12 70 30 L70 22 Q50 8 30 22 Z" fill="#4A3728"/><rect x="34" y="30" width="14" height="8" rx="4" fill="#2C3E50"/><rect x="52" y="30" width="14" height="8" rx="4" fill="#2C3E50"/><path d="M48 32 L52 32" stroke="#2C3E50" stroke-width="2"/><path d="M44 48 Q50 52 56 48" stroke="#333" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M22 88 Q22 58 50 58 Q78 58 78 88 Z" fill="#2C3E50"/><path d="M50 58 L50 88" stroke="#FFF" stroke-width="1.5"/></svg>',
+'handsome':'<svg viewBox="0 0 100 100"><circle cx="50" cy="34" r="18" fill="#F5C6A0"/><path d="M30 30 Q50 12 70 30 L70 22 Q50 8 30 22 Z" fill="#4A3728"/><rect x="34" y="30" width="14" height="8" rx="4" fill="#2C3E50"/><rect x="52" y="30" width="14" height="8" rx="4" fill="#2C3E50"/><path d="M48 32 L52 32" stroke="#2C3E50" stroke-width="2"/><path d="M44 48 Q50 52 56 48" stroke="#333" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M22 88 Q22 58 50 58 Q78 58 78 88 Z" fill="#2C3E50"/></svg>',
 'know':'<svg viewBox="0 0 100 100"><path d="M50 18 Q30 18 26 42 Q24 60 38 70 L38 82 L62 82 L62 70 Q76 60 74 42 Q70 18 50 18 Z" fill="#F5B7E0"/><path d="M36 42 L44 50 L64 30" stroke="#27AE60" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>',
 'chin':'<svg viewBox="0 0 100 100"><circle cx="50" cy="40" r="24" fill="#F5C6A0"/><circle cx="42" cy="36" r="2.5" fill="#333"/><circle cx="58" cy="36" r="2.5" fill="#333"/><path d="M42 46 Q50 52 58 46" stroke="#333" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M40 56 Q50 66 60 56" stroke="#C77DC0" stroke-width="3" fill="none" stroke-linecap="round"/></svg>',
 'hip':'<svg viewBox="0 0 100 100"><circle cx="50" cy="24" r="14" fill="#F5C6A0"/><path d="M30 52 Q30 40 50 40 Q70 40 70 52 L68 82 L32 82 Z" fill="#3498DB"/><path d="M30 60 Q50 66 70 60" stroke="#2980B9" stroke-width="2" fill="none" stroke-dasharray="3 3"/></svg>',
@@ -4600,29 +4538,29 @@ const SVG_MAP = {
 'rude':'<svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="26" fill="#E74C3C"/><circle cx="42" cy="44" r="3" fill="#FFF"/><circle cx="58" cy="44" r="3" fill="#FFF"/><path d="M40 64 L60 60" stroke="#FFF" stroke-width="2.5" stroke-linecap="round"/></svg>',
 'rich':'<svg viewBox="0 0 100 100"><rect x="24" y="40" width="52" height="44" rx="8" fill="#8B6F47"/><path d="M36 40 Q36 22 50 22 Q64 22 64 40" stroke="#5C4A2F" stroke-width="4" fill="none"/><circle cx="50" cy="62" r="10" fill="#F1C40F"/><text x="50" y="68" text-anchor="middle" font-size="14" font-weight="900" fill="#B8860B" font-family="Arial">$</text></svg>',
 'strong':'<svg viewBox="0 0 100 100"><path d="M20 58 Q20 34 40 34 Q48 30 54 34 Q66 30 72 42 Q82 44 82 58 Q82 74 66 74 L34 74 Q20 74 20 58 Z" fill="#F5C6A0"/><path d="M30 50 Q34 44 40 46 M62 46 Q68 44 72 50" stroke="#E0A880" stroke-width="2" fill="none"/></svg>',
-'weak':'<svg viewBox="0 0 100 100"><path d="M22 62 Q22 42 40 42 Q48 38 54 42 Q66 42 70 54 Q78 58 78 68 Q78 82 64 82 L36 82 Q22 82 22 62 Z" fill="#F5C6A0" opacity="0.7"/><path d="M34 58 Q40 54 44 58 M56 58 Q60 54 66 58" stroke="#E0A880" stroke-width="2" fill="none" stroke-linecap="round"/></svg>',
+'weak':'<svg viewBox="0 0 100 100"><path d="M22 62 Q22 42 40 42 Q48 38 54 42 Q66 42 70 54 Q78 58 78 68 Q78 82 64 82 L36 82 Q22 82 22 62 Z" fill="#F5C6A0" opacity="0.7"/></svg>',
 'hot':'<svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="18" fill="#F1C40F"/><path d="M50 14 L50 22 M50 78 L50 86 M14 50 L22 50 M78 50 L86 50 M24 24 L30 30 M70 70 L76 76 M76 24 L70 30 M30 70 L24 76" stroke="#E67E22" stroke-width="4" stroke-linecap="round"/></svg>',
 'cold':'<svg viewBox="0 0 100 100"><path d="M50 18 L50 82 M20 34 L80 66 M20 66 L80 34" stroke="#3498DB" stroke-width="4" stroke-linecap="round"/><path d="M42 26 L50 18 L58 26 M42 74 L50 82 L58 74 M28 40 L20 34 L28 28 M72 40 L80 34 L72 28 M28 60 L20 66 L28 72 M72 60 L80 66 L72 72" stroke="#3498DB" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>',
-'heavy':'<svg viewBox="0 0 100 100"><path d="M24 30 L40 30 L44 42 L56 42 L60 30 L76 30 L70 80 L30 80 Z" fill="#2C3E50"/><path d="M44 42 L56 42" stroke="#FFF" stroke-width="2"/><text x="50" y="70" text-anchor="middle" font-size="18" font-weight="900" fill="#F1C40F" font-family="Arial">kg</text></svg>',
+'heavy':'<svg viewBox="0 0 100 100"><path d="M24 30 L40 30 L44 42 L56 42 L60 30 L76 30 L70 80 L30 80 Z" fill="#2C3E50"/><text x="50" y="70" text-anchor="middle" font-size="18" font-weight="900" fill="#F1C40F" font-family="Arial">kg</text></svg>',
 'light':'<svg viewBox="0 0 100 100"><path d="M50 20 Q44 20 42 34 L38 46 Q32 54 32 62 Q32 76 46 78 L54 78 Q68 76 68 62 Q68 54 62 46 L58 34 Q56 20 50 20 Z" fill="#F5E6D3" stroke="#BDC3C7" stroke-width="2"/><path d="M42 62 Q50 56 58 62" stroke="#BDC3C7" stroke-width="2" fill="none"/></svg>',
-'godmother':'<svg viewBox="0 0 100 100"><circle cx="50" cy="34" r="18" fill="#F5C6A0"/><circle cx="44" cy="32" r="2.5" fill="#333"/><circle cx="56" cy="32" r="2.5" fill="#333"/><path d="M44 40 Q50 44 56 40" stroke="#333" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M28 30 Q50 14 72 30 L72 44 Q50 30 28 44 Z" fill="#F5E6A8" opacity="0.7"/><path d="M24 88 Q24 58 50 58 Q76 58 76 88 Z" fill="#9B59B6"/></svg>',
-'godfather':'<svg viewBox="0 0 100 100"><circle cx="50" cy="34" r="18" fill="#F5C6A0"/><circle cx="44" cy="32" r="2.5" fill="#333"/><circle cx="56" cy="32" r="2.5" fill="#333"/><path d="M44 40 Q50 44 56 40" stroke="#333" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M28 30 Q50 14 72 30 L72 44 Q50 30 28 44 Z" fill="#F5E6A8" opacity="0.7"/><path d="M24 88 Q24 58 50 58 Q76 58 76 88 Z" fill="#2C3E50"/></svg>',
-'brother in law':'<svg viewBox="0 0 100 100"><circle cx="50" cy="34" r="18" fill="#F5C6A0"/><circle cx="44" cy="32" r="2.5" fill="#333"/><circle cx="56" cy="32" r="2.5" fill="#333"/><path d="M44 40 Q50 44 56 40" stroke="#333" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M24 88 Q24 58 50 58 Q76 58 76 88 Z" fill="#3498DB"/><circle cx="75" cy="45" r="10" fill="#F1C40F"/><text x="75" y="50" text-anchor="middle" font-size="12" font-weight="900" fill="#B8860B" font-family="Arial">IN</text></svg>',
-'sister in law':'<svg viewBox="0 0 100 100"><circle cx="50" cy="34" r="18" fill="#F5C6A0"/><path d="M32 34 Q32 18 50 18 Q68 18 68 34 L68 48 Q60 40 50 42 Q40 40 32 48 Z" fill="#4A3728"/><circle cx="44" cy="34" r="2.5" fill="#333"/><circle cx="56" cy="34" r="2.5" fill="#333"/><path d="M44 42 Q50 46 56 42" stroke="#333" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M24 88 Q24 58 50 58 Q76 58 76 88 Z" fill="#EC7063"/><circle cx="75" cy="45" r="10" fill="#F1C40F"/><text x="75" y="50" text-anchor="middle" font-size="12" font-weight="900" fill="#B8860B" font-family="Arial">IN</text></svg>',
-'father in law':'<svg viewBox="0 0 100 100"><circle cx="50" cy="34" r="18" fill="#F5C6A0"/><path d="M32 30 Q50 14 68 30 L68 22 Q50 8 32 22 Z" fill="#95A5A6"/><circle cx="44" cy="32" r="2.5" fill="#333"/><circle cx="56" cy="32" r="2.5" fill="#333"/><path d="M44 40 Q50 44 56 40" stroke="#333" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M24 88 Q24 58 50 58 Q76 58 76 88 Z" fill="#5D6D7E"/><circle cx="75" cy="45" r="10" fill="#F1C40F"/><text x="75" y="50" text-anchor="middle" font-size="12" font-weight="900" fill="#B8860B" font-family="Arial">IN</text></svg>',
-'mother in law':'<svg viewBox="0 0 100 100"><circle cx="50" cy="34" r="18" fill="#F5C6A0"/><path d="M30 34 Q30 16 50 16 Q70 16 70 34 L70 32 Q58 22 42 22 Q30 26 30 34 Z" fill="#95A5A6"/><circle cx="44" cy="32" r="2.5" fill="#333"/><circle cx="56" cy="32" r="2.5" fill="#333"/><path d="M44 40 Q50 44 56 40" stroke="#333" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M24 88 Q24 58 50 58 Q76 58 76 88 Z" fill="#9B59B6"/><circle cx="75" cy="45" r="10" fill="#F1C40F"/><text x="75" y="50" text-anchor="middle" font-size="12" font-weight="900" fill="#B8860B" font-family="Arial">IN</text></svg>',
-'stepfather':'<svg viewBox="0 0 100 100"><circle cx="50" cy="34" r="18" fill="#F5C6A0"/><circle cx="44" cy="32" r="2.5" fill="#333"/><circle cx="56" cy="32" r="2.5" fill="#333"/><path d="M44 40 Q50 44 56 40" stroke="#333" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M24 88 Q24 58 50 58 Q76 58 76 88 Z" fill="#2C3E50"/><circle cx="75" cy="45" r="11" fill="#27AE60"/><text x="75" y="52" text-anchor="middle" font-size="18" font-weight="900" fill="#FFF" font-family="Arial">+</text></svg>',
-'stepmother':'<svg viewBox="0 0 100 100"><circle cx="50" cy="34" r="18" fill="#F5C6A0"/><path d="M32 34 Q32 18 50 18 Q68 18 68 34 L68 46 Q60 40 50 42 Q40 40 32 46 Z" fill="#4A3728"/><circle cx="44" cy="34" r="2.5" fill="#333"/><circle cx="56" cy="34" r="2.5" fill="#333"/><path d="M44 42 Q50 46 56 42" stroke="#333" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M24 88 Q24 58 50 58 Q76 58 76 88 Z" fill="#EC7063"/><circle cx="75" cy="45" r="11" fill="#27AE60"/><text x="75" y="52" text-anchor="middle" font-size="18" font-weight="900" fill="#FFF" font-family="Arial">+</text></svg>',
-'elder brother':'<svg viewBox="0 0 100 100"><circle cx="50" cy="34" r="18" fill="#F5C6A0"/><path d="M32 32 Q50 22 68 32 L68 22 Q50 14 32 22 Z" fill="#4A3728"/><circle cx="44" cy="34" r="2" fill="#333"/><circle cx="56" cy="34" r="2" fill="#333"/><path d="M44 42 Q50 46 56 42" stroke="#333" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M24 88 Q24 58 50 58 Q76 58 76 88 Z" fill="#3498DB"/><text x="50" y="80" text-anchor="middle" font-size="14" font-weight="900" fill="#FFF" font-family="Arial">1</text></svg>',
-'elder sister':'<svg viewBox="0 0 100 100"><circle cx="50" cy="34" r="18" fill="#F5C6A0"/><path d="M32 34 Q32 18 50 18 Q68 18 68 34 L68 48 Q60 40 50 42 Q40 40 32 48 Z" fill="#4A3728"/><circle cx="44" cy="34" r="2" fill="#333"/><circle cx="56" cy="34" r="2" fill="#333"/><path d="M44 42 Q50 46 56 42" stroke="#333" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M24 88 Q24 58 50 58 Q76 58 76 88 Z" fill="#EC7063"/><text x="50" y="80" text-anchor="middle" font-size="14" font-weight="900" fill="#FFF" font-family="Arial">1</text></svg>',
-'younger brother':'<svg viewBox="0 0 100 100"><circle cx="50" cy="38" r="14" fill="#F5C6A0"/><circle cx="46" cy="36" r="2" fill="#333"/><circle cx="54" cy="36" r="2" fill="#333"/><path d="M46 42 Q50 46 54 42" stroke="#333" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M28 88 Q28 62 50 62 Q72 62 72 88 Z" fill="#27AE60"/><text x="50" y="84" text-anchor="middle" font-size="14" font-weight="900" fill="#FFF" font-family="Arial">2</text></svg>',
-'younger sister':'<svg viewBox="0 0 100 100"><circle cx="50" cy="38" r="14" fill="#F5C6A0"/><path d="M38 36 Q38 24 50 24 Q62 24 62 36 L62 44 Q56 38 50 40 Q44 38 38 44 Z" fill="#4A3728"/><circle cx="46" cy="37" r="2" fill="#333"/><circle cx="54" cy="37" r="2" fill="#333"/><path d="M46 43 Q50 47 54 43" stroke="#333" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M28 88 Q28 62 50 62 Q72 62 72 88 Z" fill="#F39C12"/><text x="50" y="84" text-anchor="middle" font-size="14" font-weight="900" fill="#FFF" font-family="Arial">2</text></svg>',
+'godmother':'<svg viewBox="0 0 100 100"><circle cx="50" cy="34" r="18" fill="#F5C6A0"/><path d="M28 30 Q50 14 72 30 L72 44 Q50 30 28 44 Z" fill="#F5E6A8" opacity="0.7"/><path d="M24 88 Q24 58 50 58 Q76 58 76 88 Z" fill="#9B59B6"/></svg>',
+'godfather':'<svg viewBox="0 0 100 100"><circle cx="50" cy="34" r="18" fill="#F5C6A0"/><path d="M28 30 Q50 14 72 30 L72 44 Q50 30 28 44 Z" fill="#F5E6A8" opacity="0.7"/><path d="M24 88 Q24 58 50 58 Q76 58 76 88 Z" fill="#2C3E50"/></svg>',
+'brother in law':'<svg viewBox="0 0 100 100"><circle cx="50" cy="34" r="18" fill="#F5C6A0"/><path d="M24 88 Q24 58 50 58 Q76 58 76 88 Z" fill="#3498DB"/><circle cx="75" cy="45" r="10" fill="#F1C40F"/><text x="75" y="50" text-anchor="middle" font-size="12" font-weight="900" fill="#B8860B" font-family="Arial">IN</text></svg>',
+'sister in law':'<svg viewBox="0 0 100 100"><circle cx="50" cy="34" r="18" fill="#F5C6A0"/><path d="M32 34 Q32 18 50 18 Q68 18 68 34 L68 48 Q60 40 50 42 Q40 40 32 48 Z" fill="#4A3728"/><path d="M24 88 Q24 58 50 58 Q76 58 76 88 Z" fill="#EC7063"/><circle cx="75" cy="45" r="10" fill="#F1C40F"/><text x="75" y="50" text-anchor="middle" font-size="12" font-weight="900" fill="#B8860B" font-family="Arial">IN</text></svg>',
+'father in law':'<svg viewBox="0 0 100 100"><circle cx="50" cy="34" r="18" fill="#F5C6A0"/><path d="M32 30 Q50 14 68 30 L68 22 Q50 8 32 22 Z" fill="#95A5A6"/><path d="M24 88 Q24 58 50 58 Q76 58 76 88 Z" fill="#5D6D7E"/><circle cx="75" cy="45" r="10" fill="#F1C40F"/><text x="75" y="50" text-anchor="middle" font-size="12" font-weight="900" fill="#B8860B" font-family="Arial">IN</text></svg>',
+'mother in law':'<svg viewBox="0 0 100 100"><circle cx="50" cy="34" r="18" fill="#F5C6A0"/><path d="M30 34 Q30 16 50 16 Q70 16 70 34 Z" fill="#95A5A6"/><path d="M24 88 Q24 58 50 58 Q76 58 76 88 Z" fill="#9B59B6"/><circle cx="75" cy="45" r="10" fill="#F1C40F"/><text x="75" y="50" text-anchor="middle" font-size="12" font-weight="900" fill="#B8860B" font-family="Arial">IN</text></svg>',
+'stepfather':'<svg viewBox="0 0 100 100"><circle cx="50" cy="34" r="18" fill="#F5C6A0"/><path d="M24 88 Q24 58 50 58 Q76 58 76 88 Z" fill="#2C3E50"/><circle cx="75" cy="45" r="11" fill="#27AE60"/><text x="75" y="52" text-anchor="middle" font-size="18" font-weight="900" fill="#FFF" font-family="Arial">+</text></svg>',
+'stepmother':'<svg viewBox="0 0 100 100"><circle cx="50" cy="34" r="18" fill="#F5C6A0"/><path d="M32 34 Q32 18 50 18 Q68 18 68 34 L68 46 Q60 40 50 42 Q40 40 32 46 Z" fill="#4A3728"/><path d="M24 88 Q24 58 50 58 Q76 58 76 88 Z" fill="#EC7063"/><circle cx="75" cy="45" r="11" fill="#27AE60"/><text x="75" y="52" text-anchor="middle" font-size="18" font-weight="900" fill="#FFF" font-family="Arial">+</text></svg>',
+'elder brother':'<svg viewBox="0 0 100 100"><circle cx="50" cy="34" r="18" fill="#F5C6A0"/><path d="M32 32 Q50 22 68 32 L68 22 Q50 14 32 22 Z" fill="#4A3728"/><path d="M24 88 Q24 58 50 58 Q76 58 76 88 Z" fill="#3498DB"/><text x="50" y="80" text-anchor="middle" font-size="14" font-weight="900" fill="#FFF" font-family="Arial">1</text></svg>',
+'elder sister':'<svg viewBox="0 0 100 100"><circle cx="50" cy="34" r="18" fill="#F5C6A0"/><path d="M32 34 Q32 18 50 18 Q68 18 68 34 L68 48 Q60 40 50 42 Q40 40 32 48 Z" fill="#4A3728"/><path d="M24 88 Q24 58 50 58 Q76 58 76 88 Z" fill="#EC7063"/><text x="50" y="80" text-anchor="middle" font-size="14" font-weight="900" fill="#FFF" font-family="Arial">1</text></svg>',
+'younger brother':'<svg viewBox="0 0 100 100"><circle cx="50" cy="38" r="14" fill="#F5C6A0"/><path d="M28 88 Q28 62 50 62 Q72 62 72 88 Z" fill="#27AE60"/><text x="50" y="84" text-anchor="middle" font-size="14" font-weight="900" fill="#FFF" font-family="Arial">2</text></svg>',
+'younger sister':'<svg viewBox="0 0 100 100"><circle cx="50" cy="38" r="14" fill="#F5C6A0"/><path d="M38 36 Q38 24 50 24 Q62 24 62 36 L62 44 Q56 38 50 40 Q44 38 38 44 Z" fill="#4A3728"/><path d="M28 88 Q28 62 50 62 Q72 62 72 88 Z" fill="#F39C12"/><text x="50" y="84" text-anchor="middle" font-size="14" font-weight="900" fill="#FFF" font-family="Arial">2</text></svg>',
 'head':'<svg viewBox="0 0 100 100"><path d="M50 18 Q34 18 30 36 Q26 50 34 60 L34 74 L66 74 L66 60 Q74 50 70 36 Q66 18 50 18 Z" fill="#F5C6A0"/><path d="M40 42 Q44 36 50 40 Q56 36 60 42" stroke="#333" stroke-width="2" fill="none" stroke-linecap="round"/></svg>',
-'pumpkin':'<svg viewBox="0 0 100 100"><ellipse cx="50" cy="58" rx="34" ry="30" fill="#EA580C"/><ellipse cx="50" cy="58" rx="34" ry="30" fill="none" stroke="#7C2D12" stroke-width="2"/><ellipse cx="50" cy="58" rx="20" ry="30" fill="none" stroke="#7C2D12" stroke-width="1.5" opacity="0.5"/><ellipse cx="50" cy="58" rx="9" ry="30" fill="none" stroke="#7C2D12" stroke-width="1.5" opacity="0.5"/><path d="M50 28 L50 18" stroke="#15803D" stroke-width="4" stroke-linecap="round"/><path d="M40 50 L46 50 M54 50 L60 50" stroke="#000" stroke-width="3" stroke-linecap="round"/><path d="M42 68 L50 76 L58 68" stroke="#000" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+'pumpkin':'<svg viewBox="0 0 100 100"><ellipse cx="50" cy="58" rx="34" ry="30" fill="#EA580C"/><ellipse cx="50" cy="58" rx="34" ry="30" fill="none" stroke="#7C2D12" stroke-width="2"/><path d="M50 28 L50 18" stroke="#15803D" stroke-width="4" stroke-linecap="round"/><path d="M40 50 L46 50 M54 50 L60 50" stroke="#000" stroke-width="3" stroke-linecap="round"/><path d="M42 68 L50 76 L58 68" stroke="#000" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 };
 
 // ============================================================
-//  SYNONYM_MAP — คำพ้องความหมาย
+//  SYNONYM_MAP
 // ============================================================
 const SYNONYM_MAP = {
 'ant':['insect','bug'],'apple':['fruit'],'bag':['sack','tote'],'ball':['sphere','globe'],
@@ -5200,8 +5138,6 @@ function getSynonyms(word) {
 //  PIXABAY SYSTEM
 // ============================================================
 const PIXABAY_CACHE_KEY = 'pixabay_img_cache_v2';
-const PIXABAY_KEY_STORAGE = 'pixabay_api_key';
-let pixabayKey = localStorage.getItem(PIXABAY_KEY_STORAGE) || '';
 let pixabayCache = {};
 try { pixabayCache = JSON.parse(localStorage.getItem(PIXABAY_CACHE_KEY) || '{}'); }
 catch(e) { pixabayCache = {}; }
@@ -5214,10 +5150,9 @@ function savePixabayCache() {
 async function fetchPixabayImage(word) {
   const key = word.toLowerCase().trim();
   if (pixabayCache[key] !== undefined) return pixabayCache[key];
-  if (!pixabayKey) return null;
   try {
     const q = encodeURIComponent(key);
-    const url = `https://pixabay.com/api/?key=${pixabayKey}&q=${q}&image_type=photo&per_page=3&safesearch=true&orientation=horizontal`;
+    const url = `https://pixabay.com/api/?key=${PIXABAY_KEY}&q=${q}&image_type=photo&per_page=3&safesearch=true&orientation=horizontal`;
     const res = await fetch(url);
     if (!res.ok) throw new Error('HTTP ' + res.status);
     const data = await res.json();
@@ -5235,7 +5170,6 @@ async function fetchPixabayImage(word) {
 }
 
 async function loadPixabayImagesForCards() {
-  if (!pixabayKey) return;
   const cards = document.querySelectorAll('.card');
   const CONCURRENCY = 4;
   const queue = Array.from(cards);
@@ -5283,7 +5217,7 @@ async function loadPixabayImageForModal(word, container) {
 }
 
 // ============================================================
-//  getImage — fallback emoji/svg/letter
+//  getImage
 // ============================================================
 function getImage(word, big) {
   const w = (word || '').toLowerCase().trim();
@@ -5540,9 +5474,8 @@ function render() {
     const fallbackHTML = getImage(w.en, false);
     const syns = getSynonyms(w.en);
     const synHTML = syns.length ? `<span class="syn">${syns.slice(0,3).join(', ')}</span>` : '';
-    const hasPixabay = !!pixabayKey;
     html += `<div class="card" data-en="${w.en}" data-th="${w.th}" data-pos="${w.pos}" data-grade="${w.grade}" data-index="${allWords.indexOf(w)}">
-      <div class="img-frame${hasPixabay ? ' loading' : ''}">
+      <div class="img-frame loading">
         ${fallbackHTML}
         <img class="pixabay-img" loading="lazy" alt="${w.en}">
       </div>
@@ -5578,7 +5511,7 @@ function render() {
     }, { passive: true });
   });
 
-  if (pixabayKey) loadPixabayImagesForCards();
+  loadPixabayImagesForCards();
 }
 function getWordData(card) {
   const idx = parseInt(card.dataset.index);
@@ -5609,7 +5542,6 @@ function showModal(data) {
   modalPos.textContent = data.pos || '';
   modalTh.textContent = data.th;
 
-  // Synonym
   const syns = getSynonyms(data.en);
   const synContainer = document.getElementById('modalSyn');
   if (syns.length) {
@@ -5623,10 +5555,9 @@ function showModal(data) {
     synContainer.innerHTML = '';
   }
 
-  // Image
   const fallbackHTML = getImage(data.en, true);
   modalImageWrap.innerHTML = `${fallbackHTML}<img class="modal-pixabay-img" style="display:none;" alt="${data.en}">`;
-  if (pixabayKey) loadPixabayImageForModal(data.en, modalImageWrap);
+  loadPixabayImageForModal(data.en, modalImageWrap);
 
   let html = '';
   if (data.sentenceEn) {
@@ -5839,50 +5770,6 @@ tryAutoFullscreen();
 ['click','touchstart','keydown','pointerdown'].forEach(ev => {
   document.addEventListener(ev, tryAutoFullscreen, {passive:true});
 });
-
-// ============================================================
-//  PIXABAY SETTINGS UI
-// ============================================================
-const pixabaySettings = document.getElementById('pixabaySettings');
-const pixabayModal = document.getElementById('pixabayModal');
-const pixabayClose = document.getElementById('pixabayClose');
-const pixabayKeyInput = document.getElementById('pixabayKeyInput');
-const pixabaySave = document.getElementById('pixabaySave');
-const pixabayClear = document.getElementById('pixabayClear');
-const pixabayStatus = document.getElementById('pixabayStatus');
-
-function updatePixabayIndicator() {
-  if (pixabayKey) pixabaySettings.classList.add('active');
-  else pixabaySettings.classList.remove('active');
-}
-
-pixabaySettings.addEventListener('click', () => {
-  pixabayKeyInput.value = pixabayKey;
-  pixabayStatus.textContent = pixabayKey
-    ? `✅ มีคีย์อยู่แล้ว · cache ${Object.keys(pixabayCache).length} คำ`
-    : '⚠️ ยังไม่มีคีย์ — รูปจะใช้อีโมจิแทน';
-  pixabayModal.classList.add('open');
-});
-pixabayClose.addEventListener('click', () => pixabayModal.classList.remove('open'));
-pixabayModal.addEventListener('click', (e) => {
-  if (e.target === pixabayModal) pixabayModal.classList.remove('open');
-});
-pixabaySave.addEventListener('click', () => {
-  const val = pixabayKeyInput.value.trim();
-  pixabayKey = val;
-  if (val) localStorage.setItem(PIXABAY_KEY_STORAGE, val);
-  else localStorage.removeItem(PIXABAY_KEY_STORAGE);
-  updatePixabayIndicator();
-  pixabayStatus.textContent = val ? '✅ บันทึกแล้ว! กำลังโหลดรูป...' : '🗑️ ลบคีย์แล้ว';
-  setTimeout(() => { pixabayModal.classList.remove('open'); render(); }, 400);
-});
-pixabayClear.addEventListener('click', () => {
-  pixabayCache = {};
-  localStorage.removeItem(PIXABAY_CACHE_KEY);
-  pixabayStatus.textContent = '🗑️ ล้าง cache รูปทั้งหมดแล้ว';
-  render();
-});
-updatePixabayIndicator();
 
 // ============================================================
 //  INIT
